@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Entexa_LogisticPlus>
+            <version>1.0.0</version>
+        </Entexa_LogisticPlus>
+    </modules>
+
+    <global>
+        <models>
+            <logisticplus>
+                <class>Entexa_LogisticPlus_Model</class>
+                <resourceModel>logisticplus_resource</resourceModel>
+            </logisticplus>
+            <logisticplus_resource>
+                <class>Entexa_LogisticPlus_Resource</class>
+                <entities>
+                    <box>
+                        <table>entexa_logisticplus</table>
+                    </box>
+                </entities>
+            </logisticplus_resource>
+        </models>
+
+        <resources>
+            <logisticplus_setup>
+                <setup>
+                    <module>Entexa_LogisticPlus</module>
+                </setup>
+            </logisticplus_setup>
+
+            <logisticplus_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </logisticplus_write>
+            <logisticplus_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </logisticplus_read>
+
+        </resources>
+
+        <helpers>
+            <logisticplus>
+                <class>Entexa_LogisticPlus_Helper</class>
+            </logisticplus>
+        </helpers>
+
+        <blocks>
+            <logisticplus>
+                <class>Entexa_LogisticPlus_Block</class>
+            </logisticplus>
+            <checkout>
+                <rewrite>
+                    <total_default>Entexa_LogisticPlus_Block_Total_Default</total_default>
+                </rewrite>
+            </checkout>
+        </blocks>
+
+    </global>
+
+    <frontend>
+        <routers>
+            <logisticplus>
+                <use>standard</use>
+                <args>
+                    <module>Entexa_LogisticPlus</module>
+                    <frontName>logisticplus</frontName>
+                </args>
+            </logisticplus>
+        </routers>
+
+        <layout>
+            <updates>
+                <Entexa_LogisticPlus>
+                    <file>Entexa/LogisticPlus.xml</file>
+                </Entexa_LogisticPlus>
+            </updates>
+        </layout>
+
+
+        <translate>
+            <modules>
+                <Entexa_LogisticPlus>
+                    <files>
+                        <default>Entexa_LogisticPlus.csv</default>
+                    </files>
+                </Entexa_LogisticPlus>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <Entexa_LogisticPlus>
+                    <file>Entexa/LogisticPlus.xml</file>
+                </Entexa_LogisticPlus>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <logisticplus before="Mage_Adminhtml">Entexa_LogisticPlus_Adminhtml</logisticplus>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <default>
+        <logisticplus>
+            <settings>
+                <enabled>1</enabled>
+            </settings>
+            <box>
+                <length>90</length>
+                <width>70</width>
+                <height>50</height>
+                <volume>0.315</volume>
+            </box>
+        </logisticplus>
+    </default>
+
+</config>

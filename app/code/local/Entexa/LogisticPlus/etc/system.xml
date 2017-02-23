@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <logisticplussettings translate="label" module="logisticplus">
+            <label>LogisticPlus</label>
+            <sort_order>2</sort_order>
+        </logisticplussettings>
+    </tabs>
+    <sections>
+        <logisticplus module="logisticplus" translate="label">
+            <label>Settings</label>
+            <tab>logisticplussettings</tab>
+            <frontend>text</frontend>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general module="logisticplus" translate="label">
+                    <label>General</label>
+                    <expanded>1</expanded>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_Website>1</show_in_Website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label comment" module="logisticplus">
+                            <label>Enable module</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>logisticplus/source_status</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_Website>1</show_in_Website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Is module enabled</comment>
+                        </enabled>
+                    </fields>
+                </general>
+            </groups>
+            <groups>
+                <box module="logisticplus" translate="label">
+                    <label>Box</label>
+                    <comment>Box dimensions</comment>
+                    <expanded>1</expanded>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_Website>1</show_in_Website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <length>
+                            <label>Length, cm</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits</validate>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_Website>1</show_in_Website>
+                            <show_in_store>1</show_in_store>
+                        </length>
+                        <width>
+                            <label>Width, cm</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits</validate>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_Website>1</show_in_Website>
+                            <show_in_store>1</show_in_store>
+                        </width>
+                        <height>
+                            <label>Height, cm</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_Website>1</show_in_Website>
+                            <show_in_store>1</show_in_store>
+                        </height>
+                        <volume>
+                            <label>Volume, m3</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_Website>1</show_in_Website>
+                            <show_in_store>1</show_in_store>
+                        </volume>
+                    </fields>
+                </box>
+            </groups>
+        </logisticplus>
+    </sections>
+</config>

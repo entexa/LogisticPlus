@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Entexa_LogisticPlus>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Entexa_LogisticPlus>
+    </modules>
+</config>

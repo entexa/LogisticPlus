@@ -1,0 +1,14 @@
+<?php
+$box = $this->box();
+
+if (is_array($box)) : ?>
+    <div class="col-right">
+        <strong>LogisticPlus Box</strong>
+        <ul>
+            <li>Length: <?php echo $box['length'] ?> cm</li>
+            <li>Width: <?php echo $box['width'] ?> cm</li>
+            <li>Height: <?php echo $box['height'] ?> cm</li>
+            <li>Volume: <?php echo $box['volume'] ?> m3</li>
+        </ul>
+    </div>
+<?php endif; ?>

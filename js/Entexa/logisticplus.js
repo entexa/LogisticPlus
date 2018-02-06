@@ -2,7 +2,9 @@ window.onload = function () {
 
     $('logisticplus_box_volume').readonly = true;
 
-    Event.observe($('logisticplus_box'), 'input', function (event) {
+    Event.observe($('group_fields111'), 'input', function (event) {
+
+        console.log('in');
 
         var box_length = $('logisticplus_box_length').getValue();
         var box_width = $('logisticplus_box_width').getValue();
@@ -15,6 +17,6 @@ window.onload = function () {
         var box_volume = box_length * box_width * box_height / 1000000;
         $('logisticplus_box_volume').setValue(box_volume);
     });
-};
+}
 
 

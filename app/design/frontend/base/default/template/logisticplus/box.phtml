@@ -1,14 +1,14 @@
 <?php
 $box = $this->box();
 
-if (is_array($box)) : ?>
+if (is_array($box) && $box['logisticplus_box_volume'] > 0) : ?>
     <div class="col-right">
         <strong>LogisticPlus Box</strong>
         <ul>
-            <li>Length: <?php echo $box['length'] ?> cm</li>
-            <li>Width: <?php echo $box['width'] ?> cm</li>
-            <li>Height: <?php echo $box['height'] ?> cm</li>
-            <li>Volume: <?php echo $box['volume'] ?> m3</li>
+            <li>Length: <?php echo $box['logisticplus_box_length'] ?> cm</li>
+            <li>Width: <?php echo $box['logisticplus_box_width'] ?> cm</li>
+            <li>Height: <?php echo $box['logisticplus_box_height'] ?> cm</li>
+            <li>Volume: <?php echo number_format($box['logisticplus_box_volume'], 2) ?> m3</li>
         </ul>
     </div>
 <?php endif; ?>

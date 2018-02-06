@@ -1,13 +1,11 @@
 <?php
-$box = $this->box();
+$volume = $this->box();
 
-if (is_array($box)) : ?>
+if ($volume > 0) : ?>
     <div class="checkout-types">
         LogisticPlus <strong>Total Box Volume </strong>
         <?php
-        $totalQuantity = Mage::getModel('checkout/cart')->getQuote()->getItemsQty();
-        echo '(' . $totalQuantity . ' * ' . $box['volume'] . ') : ';
-        echo $total_volume = $box['volume'] * $totalQuantity . ' m3';
+        echo $volume . ' m3';
         ?>
     </div>
 <?php endif; ?>
